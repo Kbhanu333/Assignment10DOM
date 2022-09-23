@@ -1,0 +1,29 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 5px;
+    padding: 8px;
+    justify-content: space-between;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 5px;
+    padding: 8px;
+    justify-content: space-between;   
+}
+.flex-item{
+    width: 130px;
+    height: 70px;
+    background-color: yellowgreen;
+    
+}
+.clikk{
+    width: 150px;
+    height: 40px;
+    position: relative;
+    right: 300px;
+    top: 20px;
+}

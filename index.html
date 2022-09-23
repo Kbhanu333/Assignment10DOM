@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <h3> 1. Write the code to access element which is having id as "text"</h3>
+    
+    <pre>
+    <h1 id="text">Hello Word</h1> <br>
+    
+    let a = document.getElementById("text");
+    console.log(a);
+    </pre>
+
+    <h3>2. Write the code to access element which is having tag as "h1"</h3>
+    
+    <pre>
+    <h1>Lorem ipsum dolor sit amet</h1> <br>
+    
+    let b = document.getElementsByTagName("h1");
+     console.log(b);
+    </pre>
+
+    <h3>3. Write the code to access element which is having class as "box"</h3>
+    <pre>
+    <h1 class="box">Prepbytes Elevation Academy</h1> <br>
+    
+    let c = document.getElementsByClassName("box");
+     console.log(c);
+    </pre>
+
+    
+    <h3> 4. <h4>Hello world </h4>
+
+        Change the heading from ""Hello"" to ""Hello World"" using DOM functions"</h3> 
+  <pre>
+    <h2 id="change">Hello</h2>
+
+let ele = document.getElementsByTagName("h6")[0];
+setTimeout(() =>{
+    ele.innerText =" Hello world"
+})
+</pre>
+
+    <h3>5. Create three cards on HTML page and arrange them using flex property in row or horizontal
+         direction and also create button at the bottom named "Change Flex direction". When user
+          clicks on this button, the cards arrangement should be changed to vertical direction.</h3> 
+
+     <pre>        
+    <div class="flex-container">
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <div class="flex-item"></div>
+        <button onclick="change()" type="button" class="clikk"> Change Flex direction</button>
+    </div> <br>
+   
+    let change=function(){
+        let prasad = document.getElementsByClassName("flex-container") 
+        let btnn = document.getElementsByClassName("clikk")[0]
+         prasad[0].style.flexDirection = "column"
+    }
+
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        margin: 5px;
+        padding: 8px;
+        justify-content: space-between;
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+        margin: 5px;
+        padding: 8px;
+        justify-content: space-between;   
+    }
+    .flex-item{
+        width: 130px;
+        height: 70px;
+        background-color: yellowgreen;
+        
+    }
+    .clikk{
+        width: 130px;
+        height: 40px;
+        position: relative;
+        right: 300px;
+        top: 20px;
+    }
+    </pre>
+
+    <h3>6. What s the difference between window vs document?</h3>
+    <p>The document object is a property of the window object. The window object represents the browser window.
+         The document object represents the HTML document loaded in that window. The window object has many useful
+          properties like the location object and the setTimeout function</p> <br>
+
+
+    <h3> 7. <h3>Hello </h3>
+         Add one style attribute and give text color as red and id attribute and give the id value
+         as ""heading"" in the above given h1 tag using DOM functions"</h3>
+    
+    
+    <h6 id="headingg"> iam heading </h6>  
+    
+<pre>let value = document.querySelector(h1)
+    p = value.id = "headingg";
+    console.log(value);
+    setTimeout(() => {
+      value.style.color = "red";
+      value.style.fontSixe="35px";
+    }, 2000)
+</pre>
+     
+    
+
+    <h3>8. Create an HTML page having content as Hello world and a button named Replace Text. When user will click on this button page content should be changed to "Welcome to Elevation academy"</h3>
+    
+    
+    <h1 id="namechange">Hello World</h1>
+    <button onclick="changee()">click here</button>
+<pre>
+    let s = document.getElementById("namechange")
+    s.style.color="black";
+    function changee(){
+        let s = document.getElementById("namechange")
+        s.style.color="red";
+        s.innerText="Welcome to Elevation Academy"
+    }
+</pre>
+
+    <h3>9. Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every second</h3>
+    <div id="session">
+    <span id="HH"></span>:
+    <span id="MM"></span>:
+    <span id="SS"></span>
+</div>
+    <pre>
+    
+        
+</pre>
+
+    <h3>Q10.Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected</h3>
+
+<pre>
+    <select name = "Year" id="drop">
+    <option  class="option" value="">Year</option>
+    <option class="option" value="">2020</option>
+    <option class="option" value="">2021</option>
+    <option class="option" value="">2022</option>
+  </select>
+
+  function drop () {
+      
+    let opt = document .getElementsByClassName("option");
+   for(let i=1;i < opt .length ;i++)
+    if (opt[i]. innerText=="2020"){
+        console.log(opt[i].innerText)
+    }
+    else if(opt[i].innerText=="2021"){
+        console.log(opt[i].innerText)
+    }
+   
+}
+
+
+</pre>
+
+    <h3>11. Create a form having name ,email, phone no. , birth year 
+        Add validations - phone no. should start with 91 , it should be 10 digits
+        email should be domain prepbytes.com
+        birth year should be > 95</h3>
+
+    <pre>    
+    <form action="#">
+        <label for="name">Name : </label>
+        <input id="name" type="text" placeholder="Enter your name" required><br><br>
+        <label for="email">Email :</label>
+        <input id="email" type="text" placeholder="Enter your email" required><span
+        id="message1"> Domain should be "@prepbytes.com" only</span><br><br>
+        <label for="phone">Phone No:</label>
+        <input id="phone" type="number" placeholder="Enter the phone number"
+        required><span id="message2"> Phone number should start with 91 and must be 10 digits
+        only</span><br><br>
+        <label for="birthYear">Birth Year : </label>
+        <input id="birthYear" type="date" required><span id="message3"> Birth Year should
+        be greater than 1995</span><br><br>
+        <button type="submit" onclick="check()">Submit</button>
+        </form>
+
+
+        function check(){
+            let msg1 = document.getElementById("message1");
+            let regex1 = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            let email = document.getElementById("email").value;
+            let lastVal = email.slice(-14);
+            let result1 = regex1.test(email);
+            if(result1 && lastVal==="@prepbytes.com"){
+            msg1.innerText = " Email is Valid"
+            }
+            else{
+            msg1.innerText = " Email is InValid"
+            }
+            let msg2 = document.getElementById("message2");
+            let regex2 = /^[9]+[1]+[0-9]{8}$/;
+            let phone = document.getElementById("phone").value;
+            let result2 = regex2.test(phone);
+            if(result2){
+            msg2.innerText = " Phone Number is Valid"
+            }
+            else{
+            msg2.innerText = " Phone Number is Invalid"
+            }
+            let msg3 = document.getElementById("message3");
+            let year = document.getElementById("birthYear").value;
+            let year1 = parseInt(year.slice(0,4));
+            if(year1 > 1995){
+            msg3.innerText = " Birth Year is valid"
+            }
+            else{
+            msg3.innerText = " Birth Year is Invalid"
+            }
+            }
+    </pre>
+    
+
+
+     
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
